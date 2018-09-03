@@ -48,9 +48,10 @@ namespace Keys_Onboarding.Global
             }
             if (Keys_Resource.IsLogin == "true")
             {
-                //Login loginobj = new Login();
-                TenantLogin tenantLogin = new TenantLogin();
-                tenantLogin.LoginSuccessfull();
+                Login loginobj = new Login();
+                loginobj.LoginSuccessfull();
+                //TenantLogin tenantLogin = new TenantLogin();
+                //tenantLogin.LoginSuccessfull();
             }
             else
             {

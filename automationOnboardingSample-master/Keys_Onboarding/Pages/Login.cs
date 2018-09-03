@@ -27,19 +27,19 @@ namespace Keys_Onboarding.Global
         [FindsBy(How = How.XPath, Using = "/html/body/div/div/div/div/form/div[1]/div[4]/button")]
         private IWebElement loginButton { get; set; }
 
-        // Finding the popupmyprops
+        // Finding the popupmyprops this is for market place
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[1]/div[1]/div/div[2]/div/a[1]")]
         private IWebElement PopUp { get; set; }
 
-        
-        ////skipbutton
+
+        ////skipbutton for tenant
         //[FindsBy(How = How.XPath, Using = "/html/body/div[5]/div/div[5]/a[3]")] 
         //public IWebElement NextButton { get; set; }  
 
 
         ////skipbutton
-        //[FindsBy(How = How.XPath, Using = "/html/body/div[5]/div/div[5]/a[1]")]
-        //public IWebElement SkipButton { get; set; }
+        [FindsBy(How = How.XPath, Using = "/html/body/div[5]/div/div[5]/a[1]")]
+        public IWebElement SkipButton { get; set; }
         #endregion
 
         internal void LoginSuccessfull()
@@ -51,10 +51,10 @@ namespace Keys_Onboarding.Global
             Driver.driver.Navigate().GoToUrl(ExcelLib.ReadData(2, "Url"));
 
             // Sending the username 
-            Email.SendKeys(ExcelLib.ReadData(3, "Email"));
+            Email.SendKeys(ExcelLib.ReadData(2, "Email"));
 
             // Sending the password
-            PassWord.SendKeys(ExcelLib.ReadData(3, "Password"));
+            PassWord.SendKeys(ExcelLib.ReadData(2, "Password"));
 
             // Clicking on the login button
             loginButton.Click();
