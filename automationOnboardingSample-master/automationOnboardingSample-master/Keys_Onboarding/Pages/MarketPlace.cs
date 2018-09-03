@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Keys_Onboarding.Global.CommonMethods;
 
 namespace Keys_Onboarding.Pages
 {
@@ -55,7 +56,7 @@ namespace Keys_Onboarding.Pages
             //Text
             Text.Clear();
             //enter in text
-            Text2.SendKeys("Added to verify");
+            Text2.SendKeys(ExcelLib.ReadData(3, "TestData"));
             SaveButton.Click();
             ServiceSupplier2.Click();
             MyQuote2.Click();

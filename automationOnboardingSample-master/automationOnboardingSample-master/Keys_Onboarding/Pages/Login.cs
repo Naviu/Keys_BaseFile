@@ -48,13 +48,13 @@ namespace Keys_Onboarding.Global
             ExcelLib.PopulateInCollection(Base.ExcelPath, "LoginPage");
 
             // Navigating to Login page using value from Excel
-            Driver.driver.Navigate().GoToUrl(ExcelLib.ReadData(4, "Url"));
+            Driver.driver.Navigate().GoToUrl(ExcelLib.ReadData(3, "Url"));
 
             // Sending the username 
-            Email.SendKeys(ExcelLib.ReadData(4, "Email"));
+            Email.SendKeys(ExcelLib.ReadData(3, "Email"));
 
             // Sending the password
-            PassWord.SendKeys(ExcelLib.ReadData(4, "Password"));
+            PassWord.SendKeys(ExcelLib.ReadData(3, "Password"));
 
             // Clicking on the login button
             loginButton.Click();

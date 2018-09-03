@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Keys_Onboarding.Global.CommonMethods;
 
 namespace Keys_Onboarding.Pages
 {
@@ -81,7 +82,7 @@ namespace Keys_Onboarding.Pages
             //Type dropdown
             TypeDropDown.Click();
             TypeOption.Click();
-            Message.SendKeys("automate test for verification");
+            Message.SendKeys(ExcelLib.ReadData(3, "TestData")); 
             SaveButton.Click();
             Tenanttab2.Click();
             MyRequesttab2.Click();
